@@ -6,13 +6,6 @@ type ChatMessage = {
   content: string
 }
 
-const suggestedQuestions = [
-  "Summarize Asad's experience",
-  'What are his strongest frontend skills?',
-  'Tell me about the Fish Farm project',
-  'What is Asad working on at Fyr Technology?',
-]
-
 const userInput = ref('')
 const isLoading = ref(false);
 const messagesContainer = ref<HTMLElement | null>(null);
@@ -25,13 +18,6 @@ const messages = ref<ChatMessage[]>([
       "Hi! I'm Asad's AI Career Assistant. You can ask me about his professional experience, skills, projects, education or certifications.",
   },
 ])
-
-const selectQuestion = async (question: string) => {
-  if (isLoading.value) return
-
-  userInput.value = question
-  await sendMessage()
-}
 
 const scrollToBottom = async () => {
   await nextTick()
