@@ -48,11 +48,11 @@ const handleAskAI = () => {
         id="top"
         class="relative min-h-[800px] overflow-hidden
               bg-cover bg-center bg-no-repeat
-              pt-[120px]"
+              md:pt-[120px] pt-[140px]"
         style="background-image: url('/hero-background.png')"
       >
        <div
-          class="site-container site-content relative grid min-h-[800px]
+          class="site-container site-content relative grid md:min-h-[800px]
                 grid-cols-1 lg:grid-cols-[52%_13%_35%]"
         >
 
@@ -65,7 +65,7 @@ const handleAskAI = () => {
               </p>
 
               <h1
-                class="text-5xl font-bold tracking-tight text-[#0c1830]
+                class="text-4xl font-bold tracking-tight text-[#0c1830]
                       lg:text-6xl xl:text-7xl"
               >
                 {{ portfolio.profile.name }}
@@ -102,14 +102,14 @@ const handleAskAI = () => {
               </div>
 
               <!-- Buttons -->
-              <div class="mt-8 flex flex-wrap gap-4">
+              <div class="mt-8 flex flex-wrap md:gap-4 gap-2">
 
                 <a
                   :href="portfolio.profile.linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="inline-flex h-14 items-center justify-center rounded-xl
-                        bg-[#0c1a31] px-6 font-semibold text-white
+                        bg-[#0c1a31] md:px-6 px-4 font-semibold text-white
                         transition hover:bg-[#172a48]"
                 >
                   LinkedIn
@@ -118,7 +118,7 @@ const handleAskAI = () => {
                 <a
                   :href="`mailto:${portfolio.profile.email}`"
                   class="inline-flex h-14 items-center justify-center rounded-xl
-                        border border-slate-300 bg-white px-6 font-semibold
+                        border border-slate-300 bg-white md:px-6 px-4 font-semibold
                         text-slate-900 transition hover:bg-slate-50"
                 >
                   Contact Me
@@ -127,7 +127,7 @@ const handleAskAI = () => {
                 <button
                   type="button"
                   class="inline-flex h-14 items-center justify-center rounded-xl
-                        border border-blue-400 bg-blue-50 px-6 font-semibold
+                        border border-blue-400 bg-blue-50 md:px-6 px-4 font-semibold
                         text-blue-700 transition hover:bg-blue-100"
                   @click="handleAskAI"
                 >
@@ -137,26 +137,26 @@ const handleAskAI = () => {
               </div>
 
               <!-- Tech -->
-              <div class="mt-14 flex flex-wrap gap-8 text-sm text-slate-600">
+              <div class="mt-14 flex flex-wrap md:gap-8 gap-4 text-sm text-slate-600">
 
                 <div class="text-center">
                   <div class="text-2xl font-bold text-emerald-600">V</div>
-                  <span>Vue.js</span>
+                  <span class="[text-shadow:0_1px_8px_rgba(255,255,255,0.5)]">Vue.js</span>
                 </div>
 
                 <div class="text-center">
                   <div class="text-2xl font-bold text-blue-600">TS</div>
-                  <span>TypeScript</span>
+                  <span class="[text-shadow:0_1px_8px_rgba(255,255,255,0.5)]">TypeScript</span>
                 </div>
 
                 <div class="text-center">
                   <div class="text-2xl font-bold text-yellow-500">JS</div>
-                  <span>JavaScript</span>
+                  <span class="[text-shadow:0_1px_8px_rgba(255,255,255,0.5)]">JavaScript</span>
                 </div>
 
                 <div class="text-center">
                   <div class="text-2xl font-bold text-cyan-500">≋</div>
-                  <span>Tailwind CSS</span>
+                  <span class="[text-shadow:0_1px_8px_rgba(255,255,255,0.5)]">Tailwind CSS</span>
                 </div>
 
               </div>

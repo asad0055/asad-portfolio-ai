@@ -154,7 +154,7 @@ const sendMessage = async () => {
     <!-- Header -->
     <div
       class="flex items-center justify-between border-b border-white/10
-             px-6 py-5"
+             md:px-6 px-3 md:py-5 py-2"
     >
       <div class="flex items-center gap-4">
         <div
@@ -181,7 +181,7 @@ const sendMessage = async () => {
         </div>
       </div>
 
-      <div class="flex items-center gap-2 text-sm text-slate-300">
+      <div class="md:flex hidden items-center gap-2 text-sm text-slate-300">
         <span
           class="h-2.5 w-2.5 rounded-full bg-emerald-400
                  shadow-[0_0_10px_rgba(52,211,153,0.7)]"
@@ -193,7 +193,7 @@ const sendMessage = async () => {
     <!-- Chat content -->
     <div
       ref="messagesContainer"
-      class="chat-scrollbar flex-1 overflow-y-auto px-6 py-5"
+      class="chat-scrollbar flex-1 overflow-y-auto md:px-6 px-3 md:py-5 py-2"
     >
       <!-- Initial state -->
       <template v-if="messages.length === 1">
@@ -344,7 +344,7 @@ const sendMessage = async () => {
     </div>
 
     <!-- Input -->
-    <div class="border-t border-white/10 px-5 pb-4 pt-4">
+    <div class="border-t border-white/10 md:px-5 px-2 md:py-4 py-2">
       <form
         class="flex items-center gap-3"
         @submit.prevent="sendMessage"
