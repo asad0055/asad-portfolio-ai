@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { portfolio } from '../../data/portfolio'
 import AICareerAssistant from '../ai/AICareerAssistant.vue'
-import AICareerAssistantFooter from '../ai/AICareerAssistantDup.vue'
+import ContactSection from '../ai/ContactSection.vue'
+import FooterSection from '../layout/FooterSection.vue'
+import Navbar from './Navbar.vue'
+import { nextTick, ref } from 'vue'
 
 const skillGroups = [
   { title: 'Frontend', skills: portfolio.skills.frontend },
@@ -12,168 +15,211 @@ const skillGroups = [
   { title: 'Development & DevOps', skills: portfolio.skills.devOps },
   { title: 'Collaboration', skills: portfolio.skills.collaboration },
 ]
+
+const desktopAIRef = ref<{ focusInput: () => void } | null>(null)
+const mobileAIRef = ref<{ focusInput: () => void } | null>(null)
+
+const handleAskAI = () => {
+  if (window.innerWidth < 1024) {
+    document
+      .getElementById('ai-assistant')
+      ?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+
+    setTimeout(() => {
+      mobileAIRef.value?.focusInput()
+    }, 700)
+
+    return
+  }
+
+  desktopAIRef.value?.focusInput()
+}
+
 </script>
 
 <template>
   <div class="bg-white text-slate-900">
-
-    <!-- HERO -->
-    <section
-      class="relative min-h-[800px] overflow-hidden bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/hero-background.png')"
-    >
-      <div
-        class="relative mx-auto grid min-h-[800px] max-w-[1800px]
-              grid-cols-1 px-6
-              lg:grid-cols-[52%_13%_35%]
-              lg:px-12 xl:px-16"
+        <Navbar />
+      <!-- HERO -->
+      <section
+        id="top"
+        class="relative min-h-[800px] overflow-hidden
+              bg-cover bg-center bg-no-repeat
+              pt-[120px]"
+        style="background-image: url('/hero-background.png')"
       >
-
-        <!-- LEFT: PROFILE -->
-        <div class="relative z-20 flex items-center">
-          <div class="max-w-[650px]">
-
-            <p class="mb-5 text-xl text-slate-500">
-              Hello, I'm
-            </p>
-
-            <h1
-              class="text-5xl font-bold tracking-tight text-[#0c1830]
-                    lg:text-6xl xl:text-7xl"
-            >
-              {{ portfolio.profile.name }}
-            </h1>
-
-            <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="text-2xl font-bold text-[#0c1830] lg:text-3xl">
-                {{ portfolio.profile.title }}
-              </span>
-
-              <span class="text-xl text-slate-400">•</span>
-
-              <span class="text-2xl text-slate-500 lg:text-3xl">
-                {{ portfolio.profile.specialization }}
-              </span>
-            </div>
-
-            <p class="mt-10 max-w-[590px] text-lg leading-8 text-slate-600">
-              Software Engineer with 7+ years of professional experience
-              building web applications, with a strong focus on frontend
-              development using Vue.js, TypeScript and JavaScript.
-            </p>
-
-            <!-- Location -->
-            <div class="mt-7 flex items-center gap-2 text-slate-500">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                class="h-5 w-5"
-              >
-                <path
-                  d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
-                />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-
-              {{ portfolio.profile.location }}
-            </div>
-
-            <!-- Buttons -->
-            <div class="mt-8 flex flex-wrap gap-4">
-
-              <a
-                :href="portfolio.profile.linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex h-14 items-center justify-center rounded-xl
-                      bg-[#0c1a31] px-6 font-semibold text-white
-                      transition hover:bg-[#172a48]"
-              >
-                LinkedIn
-              </a>
-
-              <a
-                :href="`mailto:${portfolio.profile.email}`"
-                class="inline-flex h-14 items-center justify-center rounded-xl
-                      border border-slate-300 bg-white px-6 font-semibold
-                      text-slate-900 transition hover:bg-slate-50"
-              >
-                Contact Me
-              </a>
-
-              <a
-                href="#ai-assistant"
-                class="inline-flex h-14 items-center justify-center rounded-xl
-                      border border-blue-400 bg-blue-50 px-6 font-semibold
-                      text-blue-700 transition hover:bg-blue-100"
-              >
-                Ask My AI
-              </a>
-
-            </div>
-
-            <!-- Tech -->
-            <div class="mt-14 flex flex-wrap gap-8 text-sm text-slate-600">
-
-              <div class="text-center">
-                <div class="text-2xl font-bold text-emerald-600">V</div>
-                <span>Vue.js</span>
-              </div>
-
-              <div class="text-center">
-                <div class="text-2xl font-bold text-blue-600">TS</div>
-                <span>TypeScript</span>
-              </div>
-
-              <div class="text-center">
-                <div class="text-2xl font-bold text-yellow-500">JS</div>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="text-center">
-                <div class="text-2xl font-bold text-cyan-500">≋</div>
-                <span>Tailwind CSS</span>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-
-        <!-- CENTER: AVATAR -->
-        <div class="relative z-10 hidden lg:block">
-
-          <img
-            src="/avatar.png"
-            alt="Asad Ur Rehman avatar"
-            class="absolute bottom-0 left-1/2
-                  max-h-[685px] w-auto max-w-none
-                  -translate-x-1/2 object-contain"
-          />
-
-        </div>
-
-
-        <!-- RIGHT: AI -->
-        <div
-          id="ai-assistant"
-          class="relative z-20 hidden items-center pl-6 lg:flex"
+       <div
+          class="site-container site-content relative grid min-h-[800px]
+                grid-cols-1 lg:grid-cols-[52%_13%_35%]"
         >
-          <div class="w-full">
-            <AICareerAssistant />
+
+          <!-- LEFT: PROFILE -->
+          <div class="relative z-20 flex items-center">
+            <div class="max-w-[650px]">
+
+              <p class="mb-5 text-xl text-slate-500">
+                Hello, I'm
+              </p>
+
+              <h1
+                class="text-5xl font-bold tracking-tight text-[#0c1830]
+                      lg:text-6xl xl:text-7xl"
+              >
+                {{ portfolio.profile.name }}
+              </h1>
+
+              <div class="mt-4 flex flex-wrap items-center gap-2">
+                <span class="text-2xl font-bold text-[#0c1830] lg:text-3xl">
+                  {{ portfolio.profile.title }}
+                </span>
+              </div>
+
+              <p class="mt-10 max-w-[590px] text-lg leading-8 text-slate-600">
+                Software Engineer with 7+ years of professional experience
+                building web applications, with a strong focus on frontend
+                development using Vue.js, TypeScript and JavaScript.
+              </p>
+
+              <!-- Location -->
+              <div class="mt-7 flex items-center gap-2 text-slate-500">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                >
+                  <path
+                    d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+                  />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+
+                {{ portfolio.profile.location }}
+              </div>
+
+              <!-- Buttons -->
+              <div class="mt-8 flex flex-wrap gap-4">
+
+                <a
+                  :href="portfolio.profile.linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex h-14 items-center justify-center rounded-xl
+                        bg-[#0c1a31] px-6 font-semibold text-white
+                        transition hover:bg-[#172a48]"
+                >
+                  LinkedIn
+                </a>
+
+                <a
+                  :href="`mailto:${portfolio.profile.email}`"
+                  class="inline-flex h-14 items-center justify-center rounded-xl
+                        border border-slate-300 bg-white px-6 font-semibold
+                        text-slate-900 transition hover:bg-slate-50"
+                >
+                  Contact Me
+                </a>
+
+                <button
+                  type="button"
+                  class="inline-flex h-14 items-center justify-center rounded-xl
+                        border border-blue-400 bg-blue-50 px-6 font-semibold
+                        text-blue-700 transition hover:bg-blue-100"
+                  @click="handleAskAI"
+                >
+                  Ask My AI
+                </button>
+
+              </div>
+
+              <!-- Tech -->
+              <div class="mt-14 flex flex-wrap gap-8 text-sm text-slate-600">
+
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-emerald-600">V</div>
+                  <span>Vue.js</span>
+                </div>
+
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-blue-600">TS</div>
+                  <span>TypeScript</span>
+                </div>
+
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-yellow-500">JS</div>
+                  <span>JavaScript</span>
+                </div>
+
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-cyan-500">≋</div>
+                  <span>Tailwind CSS</span>
+                </div>
+
+              </div>
+
+            </div>
           </div>
+
+
+          <!-- CENTER: AVATAR -->
+          <div class="relative z-10 hidden lg:block">
+
+            <img
+              src="/avatar.png"
+              alt="Asad Ur Rehman avatar"
+              class="absolute bottom-0 left-1/2
+                    max-h-[685px] w-auto max-w-none
+                    -translate-x-1/2 object-contain"
+            />
+
+          </div>
+
+
+          <!-- RIGHT: AI -->
+          <div
+            id="ai-assistant-desktop"
+            class="relative z-20 hidden items-center pl-6 lg:flex"
+          >
+            <div class="w-full">
+              <AICareerAssistant ref="desktopAIRef" />
+            </div>
+          </div>
+
         </div>
+      </section>
+      <!-- Mobile: AI -->
+      <section
+        id="ai-assistant"
+        class="border-t border-blue-100 bg-slate-50 py-16 lg:hidden"
+      >
+        <div class="site-container site-content">
 
-      </div>
-    </section>
+          <div class="mb-8 text-center">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">
+              AI Career Assistant
+            </p>
 
+            <h2 class="text-3xl font-bold text-slate-900">
+              Ask about my experience
+            </h2>
+
+            <p class="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-600">
+              Ask about my skills, experience, projects, or technical background.
+            </p>
+          </div>
+
+          <AICareerAssistant ref="mobileAIRef" />
+
+        </div>
+      </section>
 
     <!-- EXPERIENCE -->
-    <section class="border-t border-slate-200 px-6 py-24">
-      <div class="mx-auto max-w-6xl">
+    <section id="experience" class="border-t border-slate-200 px-6 py-24">
+      <div class="mx-auto site-content site-container">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
           Career
@@ -187,7 +233,6 @@ const skillGroups = [
           <article
             v-for="job in portfolio.experience"
             :key="`${job.company}-${job.role}`"
-            class="max-w-4xl"
           >
             <div
               class="flex flex-col justify-between gap-2 md:flex-row md:items-start"
@@ -218,8 +263,8 @@ const skillGroups = [
 
 
     <!-- FEATURED PROJECT -->
-    <section class="bg-slate-50 px-6 py-24">
-      <div class="mx-auto max-w-6xl">
+    <section id="projects" class="bg-slate-50 px-6 py-24">
+      <div class="mx-auto site-content site-container">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
           Featured Work
@@ -232,7 +277,7 @@ const skillGroups = [
         <div
           v-for="project in portfolio.projects"
           :key="project.name"
-          class="mt-10 max-w-4xl rounded-2xl border border-slate-200 bg-white p-8"
+          class="mt-10 rounded-2xl border border-slate-200 bg-white p-8"
         >
           <h3 class="text-2xl font-semibold">
             {{ project.name }}
@@ -262,8 +307,8 @@ const skillGroups = [
 
 
     <!-- SKILLS -->
-    <section class="px-6 py-24">
-      <div class="mx-auto max-w-6xl">
+    <section id="skills" class="px-6 py-24">
+      <div class="mx-auto site-content site-container">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
           Technologies
@@ -301,8 +346,8 @@ const skillGroups = [
 
 
     <!-- EDUCATION & CERTIFICATIONS -->
-    <section class="bg-slate-50 px-6 py-24">
-      <div class="mx-auto grid max-w-6xl gap-16 md:grid-cols-2">
+    <section id="education" class="bg-slate-50 px-6 py-24">
+      <div class="mx-auto site-content site-container grid gap-16 md:grid-cols-2">
 
         <div>
           <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
@@ -367,37 +412,13 @@ const skillGroups = [
 
 
     <!-- AI PLACEHOLDER -->
-    <AICareerAssistantFooter />
+    <section id="contact">
+      <ContactSection />
+    </section>
 
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-200 px-6 py-10">
-      <div
-        class="mx-auto flex max-w-6xl flex-col justify-between gap-4 md:flex-row"
-      >
-        <p class="font-medium">
-          {{ portfolio.profile.name }}
-        </p>
-
-        <div class="flex gap-5 text-sm text-slate-600">
-          <a
-            :href="portfolio.profile.linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-slate-900"
-          >
-            LinkedIn
-          </a>
-
-          <a
-            :href="`mailto:${portfolio.profile.email}`"
-            class="hover:text-slate-900"
-          >
-            Email
-          </a>
-        </div>
-      </div>
-    </footer>
+    <FooterSection />
 
   </div>
 </template>
