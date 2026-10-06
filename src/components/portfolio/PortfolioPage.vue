@@ -4,7 +4,7 @@ import AICareerAssistant from '../ai/AICareerAssistant.vue'
 import ContactSection from '../ai/ContactSection.vue'
 import FooterSection from '../layout/FooterSection.vue'
 import Navbar from './Navbar.vue'
-import { nextTick, ref } from 'vue'
+import { ref } from 'vue'
 
 const skillGroups = [
   { title: 'Frontend', skills: portfolio.skills.frontend },
