@@ -177,6 +177,7 @@ const handleAskAI = () => {
                 <button
                   type="button"
                   @click="handleAskAI"
+                  aria-label="Ask AI button"
                   class="col-span-2 lg:col-span-1 inline-flex md:h-14 h-10 w-full items-center
                         justify-center gap-2.5 rounded-xl
                         border border-blue-500 bg-blue-50

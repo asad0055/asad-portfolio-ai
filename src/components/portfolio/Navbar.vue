@@ -117,6 +117,7 @@ const scrollToTop = () => {
                 v-for="item in navItems"
                 :key="item.label"
                 type="button"
+                aria-label="Navigation links"
                 class="rounded-lg cursor-pointer px-3 py-2
                         text-[15px] font-semibold text-white/90
                         transition-all duration-200
@@ -133,6 +134,7 @@ const scrollToTop = () => {
             <!-- Desktop Contact -->
             <button
                 type="button"
+                aria-label="Contact"
                 class="hidden items-center cursor-pointer gap-2.5 rounded-[14px]
                         bg-[#1685ff] px-6 py-3.5
                         text-[15px] font-semibold text-white
@@ -202,6 +204,7 @@ const scrollToTop = () => {
                 v-for="item in navItems"
                 :key="item.label"
                 type="button"
+                aria-label="Mobile Navigation links"
                 class="rounded-xl px-4 cursor-pointer py-3 text-left
                         text-sm font-medium text-white/90
                         transition hover:bg-white/10 hover:text-white"
@@ -212,6 +215,7 @@ const scrollToTop = () => {
 
                 <button
                 type="button"
+                aria-label="Mobile Navigation links"
                 class="mt-2 flex items-center justify-center gap-2
                         rounded-xl bg-[#1685ff] px-4 py-3
                         text-sm font-semibold text-white

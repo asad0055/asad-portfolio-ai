@@ -174,7 +174,7 @@ const sendMessage = async () => {
         >
           <img
             src="/avatar.png"
-            alt="Asad"
+            alt="Asad Ur Rehman avatar"
             class="h-full w-full rounded-full object-cover object-top"
           />
         </div>
@@ -223,6 +223,7 @@ const sendMessage = async () => {
               v-for="question in suggestedQuestions"
               :key="question.label"
               type="button"
+              aria-label="Suggested Questions"
               class="group flex w-full items-center gap-3 rounded-2xl
                      border border-blue-400/35 bg-[#0a203d]/70
                      px-4 py-3 text-left transition duration-200
@@ -373,6 +374,7 @@ const sendMessage = async () => {
           maxlength="1500"
           :disabled="isLoading"
           placeholder="Ask a question about Asad..."
+          aria-label="Ask Asad's AI Career Assistant a question"
           class="min-w-0 flex-1 rounded-2xl border
                 bg-[#081a32] px-5 py-4 text-sm text-white
                 outline-none transition-all duration-300
