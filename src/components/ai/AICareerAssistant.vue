@@ -92,54 +92,58 @@ const sendMessage = async () => {
   await scrollToBottom()
 
   try {
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        message: question,
-        history,
-      }),
-    })
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: question,
+          history,
+        }),
+      })
 
-    if (!response.ok) {
-    const errorData = await response.json().catch(() => null)
+      const data = await response.json().catch(() => null)
 
-    throw new Error(
-        errorData?.error || 'The AI assistant could not process your request.'
-    )
-    }
+      if (!response.ok) {
+        throw new Error(
+          data?.error || 'The AI assistant could not process your request.',
+        )
+      }
 
-    const data = await response.json()
+      messages.value.push({
+        role: 'assistant',
+        content: data.answer,
+      })
 
-    messages.value.push({
-      role: 'assistant',
-      content: data.answer,
-    })
-    await scrollToBottom()
+      await scrollToBottom()
     } catch (error) {
-    console.error('Chat request failed:', error)
+      console.error('Chat request failed:', error)
 
-    let errorMessage =
+      let errorMessage =
         'Something went wrong while contacting the AI assistant. Please try again.'
 
-    if (error instanceof TypeError) {
+      // Network error — server unavailable, connection failed, etc.
+      if (error instanceof TypeError) {
         errorMessage =
-        'The AI assistant is currently unavailable. Please try again shortly.'
-    }
+          'The AI assistant is currently unavailable. Please try again shortly.'
+      }
+      // Error returned by our backend
+      else if (error instanceof Error) {
+        errorMessage = error.message
+      }
 
-    messages.value.push({
+      messages.value.push({
         role: 'assistant',
         content: errorMessage,
-    })
+      })
 
-    await scrollToBottom()
+      await scrollToBottom()
     } finally {
-    isLoading.value = false
+      isLoading.value = false
 
-    await nextTick()
-    inputRef.value?.focus()
+      await nextTick()
+      inputRef.value?.focus()
     }
 }
 </script>
@@ -353,6 +357,7 @@ const sendMessage = async () => {
           ref="inputRef"
           v-model="userInput"
           type="text"
+          maxlength="1500"
           :disabled="isLoading"
           placeholder="Ask a question about Asad..."
           class="min-w-0 flex-1 rounded-2xl border

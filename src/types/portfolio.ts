@@ -4,6 +4,7 @@ export interface Experience {
   location: string
   period: string
   description: string
+  highlights?: string[]
 }
 
 export interface Project {
@@ -11,6 +12,7 @@ export interface Project {
   location: string
   duration: string
   description: string
+  highlights?: string[]
   technologies: string[]
 }
 
@@ -44,7 +46,7 @@ export interface Portfolio {
     platforms: string[]
     database: string[]
     devOps: string[]
-    collaboration: string[]
+    engineering: string[]
   }
 
   experience: Experience[]
