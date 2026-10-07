@@ -74,12 +74,12 @@ const handleAskAI = () => {
           <div class="relative z-20 flex items-center">
             <div class="max-w-[650px] mx-auto lg:mx-0">
 
-              <p class="md:mb-5 text-xl text-slate-500">
+              <p class="md:mb-5 text-xl text-center lg:text-left text-slate-500">
                 Hello, I'm
               </p>
 
               <h1
-                class="text-4xl font-bold tracking-tight text-[#0c1830]
+                class="text-4xl font-bold text-center lg:text-left tracking-tight text-[#0c1830]
                       lg:text-6xl xl:text-7xl"
               >
                 {{ portfolio.profile.name }}
@@ -91,7 +91,7 @@ const handleAskAI = () => {
                 </span>
               </div>
 
-              <p class="md:mt-10 mt-4 max-w-[590px] text-lg leading-8 text-slate-600">
+              <p class="md:mt-10 mt-4 max-w-[590px] text-center lg:text-left text-lg leading-8 text-slate-600">
                 {{ portfolio.profile.summary }}
               </p>
 
@@ -271,7 +271,7 @@ const handleAskAI = () => {
       </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="border-t border-slate-200 px-6 py-24">
+    <section id="experience" class="border-t border-slate-200 px-0 lg:px-6 py-24">
       <div class="mx-auto site-content site-container">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
@@ -340,7 +340,7 @@ const handleAskAI = () => {
 
 
     <!-- FEATURED PROJECT -->
-    <section id="projects" class="bg-slate-50 px-6 py-24">
+    <section id="projects" class="bg-slate-50 px-0 lg:px-6 py-24">
       <div class="mx-auto site-content site-container">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
@@ -403,7 +403,7 @@ const handleAskAI = () => {
 
 
     <!-- SKILLS -->
-    <section id="skills" class="px-6 py-24">
+    <section id="skills" class="px-0 lg:px-6 py-24">
       <div class="mx-auto site-content site-container">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
@@ -442,7 +442,7 @@ const handleAskAI = () => {
 
 
     <!-- EDUCATION & CERTIFICATIONS -->
-    <section id="education" class="bg-slate-50 px-6 py-24">
+    <section id="education" class="bg-slate-50 px-0 lg:px-6 py-24">
       <div class="mx-auto site-content site-container grid gap-16 md:grid-cols-2">
 
         <div>
