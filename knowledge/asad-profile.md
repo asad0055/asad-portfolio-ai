@@ -28,13 +28,18 @@ Specialization: Frontend Development
 
 Current Role: Senior Frontend Developer
 
-Location: Norway
+Current Location: Trondheim, Norway
+
+Relocation: Open to relocating anywhere in Norway for the right job opportunity.
 
 LinkedIn:
 linkedin.com/in/asad-rehman-dev/
 
 Email:
 asad_0055@hotmail.com
+
+Phone:
++47 968 32 901
 
 ---
 
@@ -834,3 +839,15 @@ may provide a more detailed answer using the documented evidence.
 
 The assistant should use conversation context for reasonable follow-up
 questions without introducing undocumented information.
+
+---
+
+## Professional References
+
+Asad has professional references from previous employment who can speak about his work experience, technical contributions, collaboration, and professional performance.
+
+The identities and contact details of references are not publicly disclosed through the portfolio or AI assistant.
+
+Recruiters or hiring managers who would like reference details can contact Asad directly:
+- Email: asad_0055@hotmail.com
+- LinkedIn: https://linkedin.com/in/asad-rehman-dev/

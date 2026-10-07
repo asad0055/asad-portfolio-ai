@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { nextTick, ref } from 'vue'
+import { marked } from 'marked'
 
 type ChatMessage = {
   role: 'user' | 'assistant'
@@ -65,6 +66,10 @@ const selectQuestion = async (question: string) => {
   userInput.value = question
   await nextTick()
   inputRef.value?.focus()
+}
+
+const renderMarkdown = (content: string) => {
+  return marked.parse(content)
 }
 
 const sendMessage = async () => {
@@ -320,7 +325,15 @@ const sendMessage = async () => {
                   : 'rounded-bl-md border border-blue-400/25 bg-[#102b50] text-slate-100'
               "
             >
-              {{ message.content }}
+              <div
+                v-if="message.role === 'assistant'"
+                class="ai-markdown"
+                v-html="renderMarkdown(message.content)"
+              ></div>
+
+              <span v-else>
+                {{ message.content }}
+              </span>
             </div>
           </div>
 

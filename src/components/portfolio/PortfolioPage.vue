@@ -45,7 +45,6 @@ const handleAskAI = () => {
 
   desktopAIRef.value?.focusInput()
 }
-
 </script>
 
 <template>
@@ -56,7 +55,7 @@ const handleAskAI = () => {
         id="top"
         class="relative min-h-[800px] overflow-hidden
               bg-cover bg-center bg-no-repeat
-              md:pt-[120px] pt-[140px] pb-10 md:pb-0"
+              md:pt-[120px] pt-[140px] pb-10 lg:pb-0"
         style="background-image: url('/hero-background.png')"
       >
        <div
@@ -73,7 +72,7 @@ const handleAskAI = () => {
           </div>
           <!-- LEFT: PROFILE -->
           <div class="relative z-20 flex items-center">
-            <div class="max-w-[650px]">
+            <div class="max-w-[650px] mx-auto lg:mx-0">
 
               <p class="md:mb-5 text-xl text-slate-500">
                 Hello, I'm
@@ -86,8 +85,8 @@ const handleAskAI = () => {
                 {{ portfolio.profile.name }}
               </h1>
 
-              <div class="md:mt-4 mt-1 flex flex-wrap items-center gap-2">
-                <span class="text-2xl font-bold text-[#0c1830] lg:text-3xl">
+              <div class="mt-1 flex flex-wrap items-center justify-center gap-2 md:mt-4 lg:justify-start">
+                <span class="text-center text-2xl font-bold text-[#0c1830] lg:text-left lg:text-3xl">
                   {{ portfolio.profile.title }}
                 </span>
               </div>
@@ -97,7 +96,7 @@ const handleAskAI = () => {
               </p>
 
               <!-- Location -->
-              <div class="mt-7 flex items-center gap-2 text-slate-500">
+              <div class="mt-7 flex items-center justify-center gap-2 text-slate-500 lg:justify-start">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -195,7 +194,7 @@ const handleAskAI = () => {
 
 
               <!-- Tech -->
-              <div class="mt-14 hidden md:flex flex-wrap gap-4 text-sm text-slate-600 md:gap-8">
+              <div class="mt-14 hidden lg:flex flex-wrap gap-4 text-sm text-slate-600 md:gap-8">
                 <div
                   v-for="tech in heroTech"
                   :key="tech.label"

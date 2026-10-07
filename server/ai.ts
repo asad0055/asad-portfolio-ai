@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 
 export const MAX_MESSAGE_LENGTH = 1500
 export const MAX_HISTORY_ITEMS = 6
-export const MAX_HISTORY_ITEM_LENGTH = 2000
+export const MAX_HISTORY_ITEM_LENGTH = 1500
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -59,6 +59,7 @@ export async function askCareerAssistant(
 
   const response = await openai.responses.create({
     model: 'gpt-5.6-luna',
+    max_output_tokens: 500,
 
     instructions: `
       You are Asad Ur Rehman's AI Career Assistant.
@@ -328,6 +329,10 @@ export async function askCareerAssistant(
           "The available information doesn't establish that."
 
       35. Stop once the question has been sufficiently answered.
+
+      36. If the user only sends a greeting such as "hello", "hi", or "hey", respond briefly and naturally. Do not repeat the assistant introduction or capabilities. For example: "Hi! What would you like to know about Asad?"
+
+      37. If asked whether Asad has professional references, confirm that he has references from previous employment. Do not invent or disclose reference names, companies, phone numbers, email addresses, or other identifying details. If someone asks for reference details, explain that they are available upon request and provide Asad's documented public email and LinkedIn contact information.
 
       ASAD'S CAREER KNOWLEDGE BASE:
 

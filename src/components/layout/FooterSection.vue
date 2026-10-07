@@ -12,20 +12,25 @@
              justify-between gap-3 sm:flex-row"
     >
       <!-- Brand -->
-      <div class="inline-flex items-center">
+      <button
+        type="button"
+        class="inline-flex cursor-pointer cursor-pointer items-center"
+        aria-label="Back to top"
+        @click="scrollToTop"
+      >
         <span
-            class="font-['Pilcrow_Rounded'] text-[24px]
+          class="font-['Pilcrow_Rounded'] text-[24px]
                 font-bold leading-none text-white"
         >
-            devbyasad
+          devbyasad
         </span>
 
         <span
-            class="ml-[3px] mt-[8px] h-[7px] w-[7px]
+          class="ml-[3px] mt-[8px] h-[7px] w-[7px]
                 rounded-full bg-[#2495ff]
                 shadow-[0_0_8px_rgba(36,149,255,0.8)]"
         ></span>
-        </div>
+      </button>
 
       <!-- Copyright -->
       <p class="font-['Pilcrow_Rounded'] font-medium text-center text-sm text-white/70 sm:text-right">
@@ -37,4 +42,11 @@
 
 <script setup lang="ts">
 const currentYear = new Date().getFullYear()
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
 </script>
