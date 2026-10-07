@@ -1,7 +1,7 @@
 <template>
   <section
     id="contact"
-    class="relative overflow-hidden bg-[#071a33] px-6 py-24"
+    class="relative overflow-hidden bg-[#071a33] px-6 py-16 md:py-20"
   >
     <!-- Background decoration -->
     <div
@@ -35,107 +35,114 @@
       </div>
 
       <!-- Contact cards -->
-      <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
         <!-- Email -->
         <a
           href="mailto:asad_0055@hotmail.com"
-          class="group rounded-2xl border border-blue-400/20
-                 bg-[#0c2342]/70 p-6 transition duration-300
-                 hover:-translate-y-1 hover:border-blue-400/60
-                 hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]"
+          class="group flex items-center gap-4 rounded-2xl
+                border border-blue-400/20 bg-[#0c2342]/70
+                px-5 py-4 transition duration-300
+                hover:-translate-y-1 hover:border-blue-400/60
+                hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]"
         >
           <div
-            class="flex h-12 w-12 items-center justify-center rounded-xl
-                   bg-blue-500/10 text-blue-400 transition
-                   group-hover:bg-blue-500/20"
+            class="flex h-11 w-11 shrink-0 items-center justify-center
+                  rounded-xl bg-blue-500/10 text-blue-400
+                  transition group-hover:bg-blue-500/20"
           >
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="1.8"
-              class="h-6 w-6"
+              class="h-5 w-5"
             >
               <rect x="3" y="5" width="18" height="14" rx="2" />
               <path d="m3 7 9 6 9-6" />
             </svg>
           </div>
 
-          <p class="mt-5 text-sm text-slate-400">
-            Email
-          </p>
+          <div class="min-w-0">
+            <p class="text-sm text-slate-400">
+              Email
+            </p>
 
-          <p
-            class="mt-1 break-all font-medium text-white
-                   transition group-hover:text-blue-300"
-          >
-            asad_0055@hotmail.com
-          </p>
+            <p
+              class="mt-1 break-all font-medium text-white
+                    transition group-hover:text-blue-300"
+            >
+              asad_0055@hotmail.com
+            </p>
+          </div>
         </a>
 
         <!-- LinkedIn -->
-        <a
+       <a
           href="https://linkedin.com/in/asad-rehman-dev/"
           target="_blank"
           rel="noopener noreferrer"
-          class="group rounded-2xl border border-blue-400/20
-                 bg-[#0c2342]/70 p-6 transition duration-300
-                 hover:-translate-y-1 hover:border-blue-400/60
-                 hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]"
+          class="group flex items-center gap-4 rounded-2xl
+                border border-blue-400/20 bg-[#0c2342]/70
+                px-5 py-4 transition duration-300
+                hover:-translate-y-1 hover:border-blue-400/60
+                hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]"
         >
           <div
-            class="flex h-12 w-12 items-center justify-center rounded-xl
-                   bg-blue-500/10 text-blue-400 transition
-                   group-hover:bg-blue-500/20"
+            class="flex h-11 w-11 shrink-0 items-center justify-center
+                  rounded-xl bg-blue-500/10 text-blue-400
+                  transition group-hover:bg-blue-500/20"
           >
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="h-6 w-6"
+              class="h-5 w-5"
             >
               <path
                 d="M6.5 8.5H3.2V19h3.3V8.5ZM4.85 3
-                   A1.92 1.92 0 1 0 4.85 6.84
-                   A1.92 1.92 0 0 0 4.85 3ZM19.8 13
-                   c0-3.17-1.69-4.65-3.94-4.65
-                   a3.4 3.4 0 0 0-3.08 1.69V8.5H9.5V19h3.28v-5.2
-                   c0-1.37.26-2.7 1.96-2.7
-                   1.68 0 1.7 1.57 1.7 2.79V19h3.28Z"
+                  A1.92 1.92 0 1 0 4.85 6.84
+                  A1.92 1.92 0 0 0 4.85 3ZM19.8 13
+                  c0-3.17-1.69-4.65-3.94-4.65
+                  a3.4 3.4 0 0 0-3.08 1.69V8.5H9.5V19h3.28v-5.2
+                  c0-1.37.26-2.7 1.96-2.7
+                  1.68 0 1.7 1.57 1.7 2.79V19h3.28Z"
               />
             </svg>
           </div>
 
-          <p class="mt-5 text-sm text-slate-400">
-            LinkedIn
-          </p>
+          <div class="min-w-0">
+            <p class="text-sm text-slate-400">
+              LinkedIn
+            </p>
 
-          <p
-            class="mt-1 font-medium text-white transition
-                   group-hover:text-blue-300"
-          >
-            View my profile
-          </p>
+            <p
+              class="mt-1 font-medium text-white transition
+                    group-hover:text-blue-300"
+            >
+              View my profile
+            </p>
+          </div>
         </a>
 
         <!-- Phone -->
         <a
           href="tel:+4796832901"
-          class="group rounded-2xl border border-blue-400/20
-                bg-[#0c2342]/70 p-6 transition duration-300
+          class="group flex items-center gap-4 rounded-2xl
+                border border-blue-400/20 bg-[#0c2342]/70
+                px-5 py-4 transition duration-300
                 hover:-translate-y-1 hover:border-blue-400/60
                 hover:shadow-[0_15px_40px_rgba(59,130,246,0.15)]"
         >
           <div
-            class="flex h-12 w-12 items-center justify-center rounded-xl
-                  bg-blue-500/10 text-blue-400 transition
-                  group-hover:bg-blue-500/20"
+            class="flex h-11 w-11 shrink-0 items-center justify-center
+                  rounded-xl bg-blue-500/10 text-blue-400
+                  transition group-hover:bg-blue-500/20"
           >
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="1.8"
-              class="h-6 w-6"
+              class="h-5 w-5"
             >
               <path
                 d="M22 16.92v3a2 2 0 0 1-2.18 2
@@ -154,16 +161,18 @@
             </svg>
           </div>
 
-          <p class="mt-5 text-sm text-slate-400">
-            Phone
-          </p>
+          <div class="min-w-0">
+            <p class="text-sm text-slate-400">
+              Phone
+            </p>
 
-          <p
-            class="mt-1 font-medium text-white transition
-                  group-hover:text-blue-300"
-          >
-            +47 968 32 901
-          </p>
+            <p
+              class="mt-1 font-medium text-white transition
+                    group-hover:text-blue-300"
+            >
+              +47 968 32 901
+            </p>
+          </div>
         </a>
       </div>
 
@@ -186,7 +195,7 @@
           <circle cx="12" cy="10" r="2.5" />
         </svg>
 
-        <span>Based in Norway</span>
+        <span>Based in Trondheim, Norway · Open to relocation across Norway</span>
       </div>
     </div>
   </section>
