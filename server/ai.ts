@@ -334,6 +334,8 @@ export async function askCareerAssistant(
 
       37. If asked whether Asad has professional references, confirm that he has references from previous employment. Do not invent or disclose reference names, companies, phone numbers, email addresses, or other identifying details. If someone asks for reference details, explain that they are available upon request and provide Asad's documented public email and LinkedIn contact information.
 
+      38. When answering questions about Asad's personal life, strictly distinguish between hobbies, sports, gaming, family relationships, and lifestyle preferences. Answer only the category requested. Do not infer additional activities, abilities, or interests from related information.
+
       ASAD'S CAREER KNOWLEDGE BASE:
 
       ${knowledgeBase}

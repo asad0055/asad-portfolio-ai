@@ -575,11 +575,39 @@ solve new challenges and continue growing technically.
 He prefers a collaborative professional environment where people can discuss
 ideas and help each other.
 
-Asad has identified Norwegian-language ability and professional networking as
-areas that can make career progression in Norway more challenging.
+Asad speaks fluent English and has basic Norwegian proficiency, with an A2 result from a municipal Norwegian language test. He recognizes that improving his Norwegian language skills and expanding his professional network can support his career progression in Norway.
 
 The knowledge base does not currently establish specific preferences regarding
 remote work, hybrid work, relocation, travel, salary or notice period.
+
+---
+
+
+# Languages
+
+## English
+- Speaking: Fluent
+- Writing: Fluent
+
+Asad communicates fluently in English, both spoken and written.
+
+## Norwegian (Norsk)
+- Proficiency: Basic
+- Norwegian language test: Achieved A2 level through a Norwegian language test administered by the municipality (kommune).
+
+Asad can communicate in Norwegian at a basic level. He has achieved A2 in a Norwegian language test.
+
+Do not describe Asad as fluent or professionally proficient in Norwegian.
+
+## Urdu
+- Native language (mother tongue).
+
+Urdu is Asad's native language.
+
+## Language Accuracy Rules
+- Do not exaggerate Asad's Norwegian proficiency.
+- Do not assume his Norwegian writing or reading level beyond what is documented.
+- Do not invent additional languages or certifications.
 
 ---
 
@@ -635,8 +663,6 @@ Marital Status: Married
 
 Children: Two
 
-Asad is married and has two children.
-
 His wider family lives in Pakistan. Maintaining a close relationship with his
 family is important to him, and he likes to visit his family in Pakistan every
 year when possible.
@@ -682,54 +708,37 @@ can be found.
 
 Family is an important part of Asad's life.
 
-He enjoys spending time with his wife and children and likes playing with his
-children during his free time.
+Asad has a lovely family with his wife and two children. He values spending time with them and enjoys playing with his children during his free time.
 
-He also values his wider family in Pakistan and likes to visit them every year
-when possible.
+His wider family lives in Pakistan, and he likes to visit them every year when possible.
 
-Asad enjoys spending time with friends and colleagues, having conversations
-and socializing.
+He also enjoys inviting family and close friends for meals and spending quality time together.
 
-He also enjoys inviting family and close friends for meals and spending
-quality time together.
+Spending time with family is important to Asad, but it must not be categorized as a hobby.
 
-## Sports
+### Sports
 
-Asad enjoys playing sports recreationally.
-
-His sports interests include:
-
-- Table tennis — one of his favorite sports to play
+Asad enjoys playing:
+- Table tennis
 - Badminton
 - Snooker
 - Football
 
-These should be described as recreational interests. The knowledge base does
-not establish competitive or professional participation in these sports.
+These are sports Asad plays. Do not automatically classify them as hobbies.
 
-## Hobbies and Free Time
+### Hobbies
 
-Outside work, Asad enjoys a mixture of family time, practical activities,
-gaming, sports and being outdoors.
+Asad's hobbies are:
+- Fixing and repairing household items.
+- Exploring nature.
 
-His free-time interests include:
+These are the only activities explicitly identified as Asad's hobbies.
 
-- Playing with and spending time with his children
-- Fixing household items and solving practical problems around the home
-- Playing PlayStation
-- Playing table tennis
-- Playing badminton
-- Playing snooker
-- Playing football
-- Exploring nature
-- Spending time with family and friends
-- Cars
+### Gaming
 
-Asad has a strong interest in cars.
+Asad sometimes plays PlayStation in his free time.
 
-He also enjoys practical problem solving outside software and likes trying to
-fix household items himself.
+Gaming should not automatically be classified as a hobby.
 
 ## Food
 
@@ -740,15 +749,14 @@ restaurants or dietary preferences.
 
 ## Lifestyle and Social Preferences
 
-Asad enjoys social interaction with friends, family and colleagues.
+Asad is a friendly and social person who enjoys conversations with friends and colleagues.
 
-He likes having conversations, spending quality time with people close to him
-and maintaining good relationships.
+He values maintaining good relationships, spending quality time with people close to him, and creating a welcoming environment.
 
-He also enjoys outdoor experiences and exploring nature.
+He appreciates cleanliness, good personal presentation, independence, and adaptability.
 
-His personal interests reflect a balance between family life, socializing,
-sports, gaming, practical activities and outdoor experiences.
+Do not infer additional hobbies, activities, or personality traits from these preferences.
+
 
 ---
 
