@@ -49,11 +49,6 @@ const { success, remaining, reset } = await chatRateLimit.limit(ip)
       })
     }
 
-    console.log('[AI Question]', {
-      timestamp: new Date().toISOString(),
-      question: question.trim(),
-    })
-
     const answer = await askCareerAssistant(message, history)
 
     return res.status(200).json({
