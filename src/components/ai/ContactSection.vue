@@ -1,3 +1,8 @@
+<script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
+</script>
 <template>
   <section
     id="contact"
@@ -21,16 +26,15 @@
           class="mb-3 text-sm font-semibold uppercase tracking-[0.2em]
                  text-blue-400"
         >
-          Contact
+          {{ t('contact.label') }}
         </p>
 
         <h2 class="text-3xl font-bold text-white md:text-4xl">
-          Let's Connect
+          {{ t('contact.heading') }}
         </h2>
 
         <p class="mt-4 leading-7 text-slate-400">
-          Interested in discussing an opportunity or learning more about
-          my experience? Feel free to get in touch.
+          {{ t('contact.description') }}
         </p>
       </div>
 
@@ -64,7 +68,7 @@
 
           <div class="min-w-0">
             <p class="text-sm text-slate-400">
-              Email
+              {{ t('contact.email') }}
             </p>
 
             <p
@@ -118,7 +122,7 @@
               class="mt-1 font-medium text-white transition
                     group-hover:text-blue-300"
             >
-              View my profile
+              {{ t('contact.linkedinProfile') }}
             </p>
           </div>
         </a>
@@ -163,7 +167,7 @@
 
           <div class="min-w-0">
             <p class="text-sm text-slate-400">
-              Phone
+              {{ t('contact.phone') }}
             </p>
 
             <p
@@ -195,7 +199,7 @@
           <circle cx="12" cy="10" r="2.5" />
         </svg>
 
-        <span>Based in Trondheim, Norway · Open to relocation across Norway</span>
+        <span>{{ t('contact.location') }}</span>
       </div>
     </div>
   </section>

@@ -1,0 +1,68 @@
+export default {
+  nav: {
+    experience: 'Experience',
+    projects: 'Projects',
+    skills: 'Skills',
+    education: 'Education',
+    contact: 'Contact',
+    language: 'Language',
+  },
+  hero: {
+    greeting: "Hello, I'm",
+    title: 'Software Engineer',
+    summary:
+      'Software Engineer with 7+ years of experience building web applications, specializing in frontend development with Vue.js, TypeScript and JavaScript. Experienced in taking ownership of frontend features from requirements to delivery, with a focus on responsive user experiences, data-driven interfaces and performance.',
+    contact: 'Contact Me',
+    askAI: 'Ask My AI',
+    aiLabel: 'AI Career Assistant',
+    aiHeading: 'Ask about my experience',
+    aiDescription:
+      'Ask about my skills, experience, projects, or technical background.',
+  },
+  experience: {
+    label: 'Career',
+    heading: 'Professional Experience',
+  },
+  projects: {
+    label: 'Featured Work',
+    heading: 'Featured Projects',
+  },
+  skills: {
+    label: 'Technologies',
+    heading: 'Technical Skills',
+    categories: {
+      frontend: 'Frontend',
+      stateManagement: 'State Management',
+      backend: 'Backend & APIs',
+      platforms: 'CMS & Platforms',
+      database: 'Database',
+      devOps: 'Development & DevOps',
+      engineering: 'Engineering',
+    },
+  },
+  education: {
+    label: 'Background',
+    heading: 'Education',
+  },
+
+  certifications: {
+    label: 'Learning',
+    heading: 'Certifications',
+  },
+  contact: {
+    label: 'Contact',
+    heading: "Let's Connect",
+    description:
+      'Interested in discussing an opportunity or learning more about my experience? Feel free to get in touch.',
+    email: 'Email',
+    linkedinProfile: 'View my profile',
+    phone: 'Phone',
+    location:
+      'Based in Trondheim, Norway · Open to relocation across Norway',
+  },
+
+  footer: {
+    backToTop: 'Back to top',
+    rights: 'All rights reserved.',
+  },
+}

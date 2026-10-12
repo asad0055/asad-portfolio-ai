@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
+const { locale, t } = useI18n()
+
+const changeLanguage = (language: 'en' | 'no') => {
+  locale.value = language
+  localStorage.setItem('portfolio-language', language)
+}
 
 const navItems = [
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Education', href: '#education' },
+  { label: 'nav.experience', href: '#experience' },
+  { label: 'nav.projects', href: '#projects' },
+  { label: 'nav.skills', href: '#skills' },
+  { label: 'nav.education', href: '#education' },
 ]
 
 const closeMenu = () => {
@@ -127,11 +134,12 @@ const scrollToTop = () => {
                         hover:shadow-[0_6px_18px_rgba(59,130,246,0.15)]"
                 @click="scrollToSection(item.href)"
                 >
-                {{ item.label }}
+                {{ t(item.label) }}
             </button>
             </div>
 
             <!-- Desktop Contact -->
+             <div class="hidden items-center gap-3 lg:flex">
             <button
                 type="button"
                 aria-label="Contact"
@@ -156,10 +164,45 @@ const scrollToTop = () => {
                     <path d="m3 7 9 6 9-6" />
                 </svg>
 
-                Contact
+                {{ t('nav.contact') }}
             </button>
+            <!-- Desktop language selector -->
+            <div class="relative">
+              <select
+                :value="locale"
+                aria-label="Select language"
+                class="cursor-pointer appearance-none rounded-xl
+                      border border-white/20 bg-white/10
+                      py-2.5 pl-3 pr-8 text-sm font-semibold
+                      text-white outline-none transition
+                      hover:bg-white/15 focus:border-blue-300"
+                @change="
+                  changeLanguage(
+                    ($event.target as HTMLSelectElement).value as 'en' | 'no'
+                  )
+                "
+              >
+                <option value="en" class="bg-[#173d68] text-white">
+                  EN
+                </option>
+                <option value="no" class="bg-[#173d68] text-white">
+                  NO
+                </option>
+              </select>
 
-            <!-- Mobile hamburger -->
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="pointer-events-none absolute right-2 top-1/2
+                      h-4 w-4 -translate-y-1/2 text-white/80"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </div>
+            </div>
+              <!-- Mobile hamburger -->
             <button
                 type="button"
                 class="flex h-11 w-11 cursor-pointer items-center justify-center
@@ -191,9 +234,11 @@ const scrollToTop = () => {
                     <path d="M4 7h16M4 12h16M4 17h16" />
                 </svg>
             </button>
+
         </div>
 
-       <!-- Mobile menu -->
+          
+        <!-- Mobile menu -->
         <div
         v-if="isMenuOpen"
         class="relative border-t border-white/10
@@ -210,7 +255,7 @@ const scrollToTop = () => {
                         transition hover:bg-white/10 hover:text-white"
                 @click="scrollToSection(item.href); closeMenu()"
                 >
-                {{ item.label }}
+                {{ t(item.label) }}
                 </button>
 
                 <button
@@ -233,8 +278,31 @@ const scrollToTop = () => {
                     <path d="m3 7 9 6 9-6" />
                 </svg>
 
-                Contact
+                {{ t('nav.contact') }}
                 </button>
+                <!-- Mobile language selector -->
+                <div class="mt-3 flex items-center justify-between
+                            border-t border-white/10 px-4 pt-4">
+                  <span class="text-sm font-medium text-white/80">
+                    {{ t('nav.language') }}
+                  </span>
+
+                  <select
+                    :value="locale"
+                    aria-label="Select language"
+                    class="cursor-pointer rounded-lg border border-white/20
+                          bg-[#173d68] px-3 py-2
+                          text-sm font-semibold text-white"
+                    @change="
+                      changeLanguage(
+                        ($event.target as HTMLSelectElement).value as 'en' | 'no'
+                      )
+                    "
+                  >
+                    <option value="en">EN</option>
+                    <option value="no">NO</option>
+                  </select>
+                </div>
             </div>
         </div>
 

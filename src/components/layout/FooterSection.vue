@@ -15,7 +15,7 @@
       <button
         type="button"
         class="inline-flex cursor-pointer cursor-pointer items-center"
-        aria-label="Back to top"
+        :aria-label="t('footer.backToTop')"
         @click="scrollToTop"
       >
         <span
@@ -34,13 +34,17 @@
 
       <!-- Copyright -->
       <p class="font-['Pilcrow_Rounded'] font-medium text-center text-sm text-white/70 sm:text-right">
-        © {{ currentYear }} Asad Ur Rehman. All rights reserved.
-        </p>
+        © {{ currentYear }} Asad Ur Rehman. {{ t('footer.rights') }}
+      </p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 const currentYear = new Date().getFullYear()
 
 const scrollToTop = () => {
