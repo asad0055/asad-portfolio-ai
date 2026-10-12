@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { nextTick, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { marked } from 'marked'
+
+const { t, locale } = useI18n()
 
 type ChatMessage = {
   role: 'user' | 'assistant'
@@ -13,13 +16,7 @@ const messagesContainer = ref<HTMLElement | null>(null);
 const inputRef = ref<HTMLInputElement | null>(null);
   const isHighlighted = ref(false);
 
-const messages = ref<ChatMessage[]>([
-  {
-    role: 'assistant',
-    content:
-      "Hi! I'm Asad's AI Career Assistant. You can ask me about his professional experience, skills, projects, education or certifications.",
-  },
-])
+const messages = ref<ChatMessage[]>([])
 
 const scrollToBottom = async () => {
   await nextTick()
@@ -47,20 +44,20 @@ defineExpose({
   focusInput,
 })
 
-const suggestedQuestions = [
+const suggestedQuestions = computed(() => [
   {
-    label: 'What experience does Asad have with Vue.js?',
+    label: t('ai.suggestedQuestions.vue'),
     icon: 'code',
   },
   {
-    label: "Tell me about Asad's recent projects.",
+    label: t('ai.suggestedQuestions.projects'),
     icon: 'folder',
   },
   {
-    label: "What are Asad's key technical skills?",
+    label: t('ai.suggestedQuestions.skills'),
     icon: 'user',
   },
-]
+])
 
 const selectQuestion = async (question: string) => {
   userInput.value = question
@@ -79,7 +76,6 @@ const sendMessage = async () => {
 
   // Capture recent conversation before adding the new question.
   const history = messages.value
-    .slice(1) // exclude the initial welcome message
     .slice(-6)
     .map((message) => ({
       role: message.role,
@@ -97,7 +93,7 @@ const sendMessage = async () => {
   await scrollToBottom()
 
   try {
-      const response = await fetch('/api/chat', {
+      const response = await fetch('http://localhost:3001/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -105,6 +101,7 @@ const sendMessage = async () => {
         body: JSON.stringify({
           message: question,
           history,
+          language: locale.value === 'no' ? 'no' : 'en',
         }),
       })
 
@@ -112,7 +109,7 @@ const sendMessage = async () => {
 
       if (!response.ok) {
         throw new Error(
-          data?.error || 'The AI assistant could not process your request.',
+          data?.error || t('ai.errors.request')
         )
       }
 
@@ -125,13 +122,11 @@ const sendMessage = async () => {
     } catch (error) {
       console.error('Chat request failed:', error)
 
-      let errorMessage =
-        'Something went wrong while contacting the AI assistant. Please try again.'
+      let errorMessage = t('ai.errors.general')
 
       // Network error — server unavailable, connection failed, etc.
       if (error instanceof TypeError) {
-        errorMessage =
-          'The AI assistant is currently unavailable. Please try again shortly.'
+        errorMessage = t('ai.errors.unavailable')
       }
       // Error returned by our backend
       else if (error instanceof Error) {
@@ -181,11 +176,11 @@ const sendMessage = async () => {
 
         <div>
           <h2 class="text-base font-bold text-white">
-            Asad's AI Career Assistant
+            {{ t('ai.title') }}
           </h2>
 
           <p class="mt-0.5 text-sm text-slate-400">
-            AI-powered portfolio assistant
+            {{ t('ai.subtitle') }}
           </p>
         </div>
       </div>
@@ -195,7 +190,7 @@ const sendMessage = async () => {
           class="h-2.5 w-2.5 rounded-full bg-emerald-400
                  shadow-[0_0_10px_rgba(52,211,153,0.7)]"
         ></span>
-        Online
+        {{ t('ai.online') }}
       </div>
     </div>
 
@@ -205,17 +200,17 @@ const sendMessage = async () => {
       class="chat-scrollbar flex-1 overflow-y-auto md:px-6 px-3 md:py-5 py-2"
     >
       <!-- Initial state -->
-      <template v-if="messages.length === 1">
+      <template v-if="messages.length === 0">
         <div
           class="max-w-[92%] rounded-2xl border border-blue-400/30
                  bg-[#102b50]/80 px-5 py-4 text-sm leading-6 text-slate-100"
         >
-          {{ messages[0].content }}
+          {{ t('ai.welcome') }}
         </div>
 
         <div class="mt-6">
           <p class="mb-3 font-semibold text-white">
-            Try asking:
+            {{ t('ai.tryAsking') }}
           </p>
 
           <div class="space-y-2.5">
@@ -223,7 +218,7 @@ const sendMessage = async () => {
               v-for="question in suggestedQuestions"
               :key="question.label"
               type="button"
-              aria-label="Suggested Questions"
+              :aria-label="t('ai.suggestedLabel')"
               class="group flex w-full items-center gap-3 rounded-2xl
                      border border-blue-400/35 bg-[#0a203d]/70
                      px-4 py-3 text-left transition duration-200
@@ -373,8 +368,8 @@ const sendMessage = async () => {
           type="text"
           maxlength="1500"
           :disabled="isLoading"
-          placeholder="Ask a question about Asad..."
-          aria-label="Ask Asad's AI Career Assistant a question"
+          :placeholder="t('ai.placeholder')"
+          :aria-label="t('ai.inputLabel')"
           class="min-w-0 flex-1 rounded-2xl border
                 bg-[#081a32] px-5 py-4 text-sm text-white
                 outline-none transition-all duration-300
@@ -390,7 +385,7 @@ const sendMessage = async () => {
         <button
           type="submit"
           :disabled="isLoading || !userInput.trim()"
-          aria-label="Send message"
+          :aria-label="t('ai.sendLabel')"
           class="flex h-13 w-13 shrink-0 items-center justify-center
                  rounded-2xl bg-blue-500 text-white
                  shadow-[0_0_22px_rgba(59,130,246,0.45)]
@@ -425,7 +420,7 @@ const sendMessage = async () => {
         </svg>
 
         <span>
-          Answers are based on Asad's documented professional profile.
+          {{ t('ai.disclaimer') }}
         </span>
       </div>
     </div>

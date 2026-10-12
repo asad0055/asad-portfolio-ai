@@ -136,4 +136,29 @@ export default {
     backToTop: 'Tilbake til toppen',
     rights: 'Alle rettigheter forbeholdt.',
   },
+  ai: {
+    title: 'Asads AI-karriereassistent',
+    subtitle: 'AI-drevet porteføljeassistent',
+    online: 'Pålogget',
+    welcome:
+      'Hei! Jeg er Asads AI-karriereassistent. Du kan spørre meg om hans arbeidserfaring, ferdigheter, prosjekter, utdanning eller sertifiseringer.',
+    tryAsking: 'Du kan for eksempel spørre:',
+    suggestedQuestions: {
+      vue: 'Hvilken erfaring har Asad med Vue.js?',
+      projects: 'Fortell meg om Asads siste prosjekter.',
+      skills: 'Hva er Asads viktigste tekniske ferdigheter?',
+    },
+    placeholder: 'Still et spørsmål om Asad...',
+    inputLabel: 'Still Asads AI-karriereassistent et spørsmål',
+    suggestedLabel: 'Foreslått spørsmål',
+    sendLabel: 'Send melding',
+    disclaimer: 'Svarene er basert på Asads dokumenterte faglige profil.',
+    errors: {
+      request: 'AI-assistenten kunne ikke behandle forespørselen din.',
+      general:
+        'Noe gikk galt under kontakten med AI-assistenten. Prøv igjen.',
+      unavailable:
+        'AI-assistenten er ikke tilgjengelig akkurat nå. Prøv igjen om litt.',
+    },
+  },
 }

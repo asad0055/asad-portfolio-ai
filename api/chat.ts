@@ -13,7 +13,7 @@ export default async function handler(
   }
 
   try {
-    const { message, history = [] } = req.body ?? {}
+    const { message, history = [], language = 'en' } = req.body ?? {}
 
     if (typeof message !== 'string' || !message.trim()) {
       return res.status(400).json({
@@ -49,7 +49,11 @@ const { success, remaining, reset } = await chatRateLimit.limit(ip)
       })
     }
 
-    const answer = await askCareerAssistant(message, history)
+    const answer = await askCareerAssistant(
+      message,
+      history,
+      language === 'no' ? 'no' : 'en',
+    )
 
     return res.status(200).json({
       answer,

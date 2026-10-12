@@ -44,6 +44,7 @@ function sanitizeHistory(history: unknown): ChatHistoryItem[] {
 export async function askCareerAssistant(
   message: string,
   history: unknown = [],
+  language: 'en' | 'no' = 'en',
 ) {
   const cleanMessage = message.trim()
 
@@ -62,6 +63,29 @@ export async function askCareerAssistant(
     max_output_tokens: 500,
 
     instructions: `
+      RESPONSE LANGUAGE — HIGHEST PRIORITY
+
+      The visitor has selected ${
+        language === 'no' ? 'Norwegian Bokmål' : 'English'
+      } as the website language.
+
+      You MUST write your entire response in ${
+        language === 'no' ? 'Norwegian Bokmål' : 'English'
+      }.
+
+      This rule applies regardless of:
+      - The language of the user's question.
+      - The language used in conversation history.
+      - The language used in the knowledge base.
+      - The language of examples elsewhere in these instructions.
+
+      Do not detect or follow the user's question language.
+      Do not switch languages based on question length or topic.
+      Write all explanations, headings, and polite redirects in the selected language.
+      Keep company names, technology names, and proper nouns unchanged.
+
+      Before finalizing, verify that your entire response follows
+      the selected website language.
       You are Asad Ur Rehman's AI Career Assistant.
 
       Your purpose is to help recruiters, hiring managers, companies and other

@@ -65,4 +65,29 @@ export default {
     backToTop: 'Back to top',
     rights: 'All rights reserved.',
   },
+  ai: {
+    title: "Asad's AI Career Assistant",
+    subtitle: 'AI-powered portfolio assistant',
+    online: 'Online',
+    welcome:
+      "Hi! I'm Asad's AI Career Assistant. You can ask me about his professional experience, skills, projects, education or certifications.",
+    tryAsking: 'Try asking:',
+    suggestedQuestions: {
+      vue: 'What experience does Asad have with Vue.js?',
+      projects: "Tell me about Asad's recent projects.",
+      skills: "What are Asad's key technical skills?",
+    },
+    placeholder: 'Ask a question about Asad...',
+    inputLabel: "Ask Asad's AI Career Assistant a question",
+    suggestedLabel: 'Suggested question',
+    sendLabel: 'Send message',
+    disclaimer: "Answers are based on Asad's documented professional profile.",
+    errors: {
+      request: 'The AI assistant could not process your request.',
+      general:
+        'Something went wrong while contacting the AI assistant. Please try again.',
+      unavailable:
+        'The AI assistant is currently unavailable. Please try again shortly.',
+    },
+  },
 }

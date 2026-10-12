@@ -13,7 +13,7 @@ app.use(express.json({ limit: '20kb' }))
 
 app.post('/api/chat', async (req, res) => {
   try {
-    const { message, history = [] } = req.body ?? {}
+    const { message, history = [], language = 'en' } = req.body ?? {}
 
     // Message must be a non-empty string
     if (typeof message !== 'string' || !message.trim()) {
@@ -30,7 +30,11 @@ app.post('/api/chat', async (req, res) => {
       })
     }
 
-    const answer = await askCareerAssistant(message, history)
+    const answer = await askCareerAssistant(
+      message,
+      history,
+      language === 'no' ? 'no' : 'en',
+    )
 
     return res.status(200).json({
       answer,
