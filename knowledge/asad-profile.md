@@ -130,30 +130,42 @@ experience is stronger with Vue.js than React.
 - Pinia
 - Vuex
 
-## Backend and APIs
+## Backend and Full-Stack Development
 
-- REST APIs
-- PHP
-- Laravel
+Asad's primary expertise is frontend development, particularly
+Vue.js, TypeScript and JavaScript.
+
+He has some backend development experience, including:
+
 - Node.js
+- REST API development and integration
+- Working with existing backend functionality
+- Authentication tokens and API request parameters
+- Data fetching and conditional server-side logic
 
-Frontend development is Asad's primary expertise.
+He also has limited hands-on experience with Microsoft Azure
+and SQL Server.
 
-He can contribute to existing backend functionality when required, including
-API-related changes, data fetching, request parameters, tokens and conditional
-logic.
+Asad has basic foundational knowledge of .NET and is
+interested in learning .NET more deeply to expand his
+backend development capabilities.
 
-For more complex backend work, he collaborates with developers whose primary
-specialization is backend development.
+He can contribute to full-stack development, particularly
+in roles where frontend engineering is the primary focus
+and backend work involves existing systems and APIs.
 
-## CMS and Web Platforms
+For more complex backend tasks, he collaborates with
+backend-specialist developers.
 
-- WordPress
-- HubSpot
+PHP and Laravel are part of his earlier technical background,
+but they are not technologies he currently focuses on.
+They should not be emphasized in general summaries of his
+backend skills unless specifically relevant to the question.
 
 ## Database
 
 - PostgreSQL
+- Microsoft SQL Server (limited hands-on experience)
 
 ## Development and DevOps
 
@@ -567,7 +579,16 @@ He values opportunities to learn and work with new technologies.
 Asad's current areas of interest for future roles are:
 
 - Senior Frontend Developer
-- Senior Fullstack Developer
+- Senior Full-Stack Developer
+
+Asad is particularly interested in strengthening his backend
+development skills, including learning .NET more deeply
+and building on his existing limited experience with Microsoft Azure
+and SQL Server.
+
+He is interested in opportunities that allow him to grow
+toward broader full-stack responsibilities while continuing
+to contribute his strong frontend expertise.
 
 He wants future roles to provide opportunities to learn new technologies,
 solve new challenges and continue growing technically.
@@ -577,8 +598,10 @@ ideas and help each other.
 
 Asad speaks fluent English and has basic Norwegian proficiency, with an A2 result from a municipal Norwegian language test. He recognizes that improving his Norwegian language skills and expanding his professional network can support his career progression in Norway.
 
+Asad is open to relocating anywhere in Norway for the right job opportunity.
+
 The knowledge base does not currently establish specific preferences regarding
-remote work, hybrid work, relocation, travel, salary or notice period.
+remote work, hybrid work, travel, salary or notice period.
 
 ---
 

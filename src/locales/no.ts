@@ -18,6 +18,7 @@ export default {
     aiHeading: 'Spør om min erfaring',
     aiDescription:
       'Spør om mine ferdigheter, erfaring, prosjekter eller tekniske bakgrunn.',
+    downloadCV: 'Last ned CV (PDF)',
   },
   experience: {
     label: 'Karriere',

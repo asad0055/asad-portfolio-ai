@@ -12,7 +12,7 @@ const heroTech = [
   { short: 'AI', label: 'AI', color: 'text-violet-600' },
 ]
 
-const { t } = useI18n()
+const { t, locale } = useI18n({ useScope: 'global' })
 const desktopAIRef = ref<{ focusInput: () => void } | null>(null)
 const mobileAIRef = ref<{ focusInput: () => void } | null>(null)
 
@@ -178,6 +178,36 @@ const handleAskAI = () => {
 
                 </div>
 
+                <!-- Download CV -->
+                <div class="mt-5 flex justify-center lg:justify-start">
+                <a
+                    :href="locale === 'no'
+                    ? '/AsadurRehman_CV_NO.pdf'
+                    : '/AsadurRehman_CV_EN.pdf'"
+                    :download="locale === 'no'
+                    ? 'AsadurRehman_CV_NO.pdf'
+                    : 'AsadurRehman_CV_EN.pdf'"
+                    class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M12 15V3" />
+                    </svg>
+                    {{ t('hero.downloadCV') }}
+                </a>
+                </div>
 
                 <!-- Tech -->
                 <div class="mt-14 hidden lg:flex flex-wrap gap-4 text-sm text-slate-600 md:gap-8">

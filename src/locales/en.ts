@@ -18,6 +18,7 @@ export default {
     aiHeading: 'Ask about my experience',
     aiDescription:
       'Ask about my skills, experience, projects, or technical background.',
+    downloadCV: 'Download CV (PDF)',
   },
   experience: {
     label: 'Career',
