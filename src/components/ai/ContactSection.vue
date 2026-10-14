@@ -21,7 +21,7 @@
 
     <div class="site-container">
       <!-- Heading -->
-      <div class="mx-auto max-w-2xl text-center">
+      <div class="mx-auto max-w-3xl text-center">
         <p
           class="mb-3 text-sm font-semibold uppercase tracking-[0.2em]
                  text-blue-400"

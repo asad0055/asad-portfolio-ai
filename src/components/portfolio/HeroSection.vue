@@ -187,7 +187,7 @@ const handleAskAI = () => {
                     :download="locale === 'no'
                     ? 'AsadurRehman_CV_NO.pdf'
                     : 'AsadurRehman_CV_EN.pdf'"
-                    class="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
+                    class="inline-flex items-center gap-2 text-sm font-medium text-white lg:text-slate-600 transition-colors hover:text-blue-600"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

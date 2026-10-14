@@ -206,52 +206,83 @@ const translatedCertifications = computed(() => {
           {{ t('projects.heading') }}
         </h2>
 
+        
         <div
-          v-for="project in translatedProjects"
+          v-for="(project, index) in translatedProjects"
           :key="project.name"
-          class="mt-10 rounded-2xl border border-slate-200 bg-white p-8"
+          class="mt-10 rounded-2xl border border-slate-200 bg-white p-6 md:p-8"
         >
-          <h3 class="text-2xl font-semibold">
-            {{ project.name }}
-          </h3>
+          <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-5 lg:gap-10">
 
-          <p class="mt-2 text-sm text-slate-500">
-            {{ project.location }} · {{ project.duration }}
-          </p>
+            <!-- Project Content: 60% -->
+            <div class="min-w-0 lg:col-span-3">
+              <h3 class="text-2xl font-semibold">
+                {{ project.name }}
+              </h3>
 
-          <p class="mt-5 leading-7 text-slate-600">
-            {{ project.description }}
-          </p>
+              <p class="mt-2 text-sm text-slate-500">
+                {{ project.location }} · {{ project.duration }}
+              </p>
 
-          <ul
-            v-if="project.highlights?.length"
-            class="mt-5 space-y-3"
-          >
-            <li
-              v-for="highlight in project.highlights"
-              :key="highlight"
-              class="flex gap-3 text-slate-600"
-            >
-              <span
-                class="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500"
-              ></span>
+              <p class="mt-5 leading-7 text-slate-600">
+                {{ project.description }}
+              </p>
 
-              <span class="leading-7">
-                {{ highlight }}
-              </span>
-            </li>
-          </ul>
+              <ul
+                v-if="project.highlights?.length"
+                class="mt-5 space-y-3"
+              >
+                <li
+                  v-for="highlight in project.highlights"
+                  :key="highlight"
+                  class="flex gap-3 text-slate-600"
+                >
+                  <span
+                    class="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500"
+                  ></span>
 
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              v-for="technology in project.technologies"
-              :key="technology"
-              class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
-            >
-              {{ technology }}
-            </span>
+                  <span class="leading-7">
+                    {{ highlight }}
+                  </span>
+                </li>
+              </ul>
+
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span
+                  v-for="technology in project.technologies"
+                  :key="technology"
+                  class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
+                >
+                  {{ technology }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Project Image: 40% -->
+            <div class="min-w-0 lg:col-span-2">
+              <a
+                :href="index === 0
+                  ? '/projects/fish-farm-portfolio.png'
+                  : '/projects/socioon-portfolio.png'"
+                target="_blank"
+                rel="noopener noreferrer"
+                :aria-label="`View ${project.name} screenshot`"
+                class="group block overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
+              >
+                <img
+                  :src="index === 0
+                    ? '/projects/fish-farm-portfolio.png'
+                    : '/projects/socioon-portfolio.png'"
+                  :alt="`${project.name} application screenshot`"
+                  loading="lazy"
+                  class="aspect-[8/5] w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </a>
+            </div>
+
           </div>
         </div>
+
 
       </div>
     </section>

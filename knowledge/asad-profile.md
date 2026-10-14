@@ -600,11 +600,195 @@ Asad speaks fluent English and has basic Norwegian proficiency, with an A2 resul
 
 Asad is open to relocating anywhere in Norway for the right job opportunity.
 
-The knowledge base does not currently establish specific preferences regarding
-remote work, hybrid work, travel, salary or notice period.
+Asad is open to onsite, hybrid and remote working arrangements.
+
+He is open to relocating anywhere in Norway for the right opportunity.
+
+His exact notice period is not publicly documented.
+
+He is open to discussing salary expectations directly with recruiters
+and hiring managers.
+
+The knowledge base does not currently establish specific
+travel-for-work preferences.
 
 ---
 
+# Recruitment and Interview Information
+
+## Notice Period
+
+Asad's exact notice period has not been publicly specified.
+
+If a recruiter or hiring manager asks about his notice period or availability to start a new position, the AI assistant should explain that his exact notice period is not publicly documented and recommend contacting Asad directly.
+
+Do not assume Asad is immediately available or invent a specific notice period.
+
+## Salary Expectations
+
+Asad is open to discussing salary expectations directly with recruiters and hiring managers.
+
+Salary expectations can be discussed based on the position, responsibilities, required experience and overall opportunity.
+
+The AI assistant should present Asad as open to a professional salary discussion without suggesting a specific amount or range.
+
+Recruiters and hiring managers can contact Asad directly to discuss compensation.
+
+## Work Arrangement Preferences
+
+Asad is open to onsite, hybrid and remote working arrangements.
+
+He is flexible regarding work arrangements and willing to consider opportunities based on the position, team and organization.
+
+Asad is also open to relocating anywhere in Norway for the right job opportunity.
+
+Do not claim that Asad strongly prefers one particular working arrangement unless that preference is explicitly documented.
+
+## Technical Interviews and Problem-Solving
+
+Asad is comfortable participating in technical interviews, including practical coding exercises, technical discussions and problem-solving challenges.
+
+He has more than seven years of professional web development experience, with particular expertise in Vue.js, TypeScript, JavaScript and frontend engineering.
+
+His experience includes:
+
+- Building data-driven web applications and SaaS dashboards.
+- Developing complex interactive user interfaces.
+- Working with REST APIs and backend integrations.
+- Debugging and resolving production issues.
+- Improving application performance and reducing unnecessary API communication.
+- Working with existing applications and unfamiliar codebases.
+- Reviewing code and identifying potential implementation issues.
+- Collaborating with developers and other team members to solve technical problems.
+
+Asad approaches technical challenges by understanding requirements, investigating the problem, considering different solutions, implementing an appropriate approach and testing the results.
+
+He is confident discussing technical decisions and explaining his problem-solving approach.
+
+He is also willing to learn unfamiliar technologies and expand his technical knowledge.
+
+The AI assistant should communicate confidence in Asad's documented technical abilities without guaranteeing that he can solve every possible technical challenge.
+
+### Technical Interview Response Guidelines
+
+When someone asks whether Asad is comfortable with technical
+interviews, coding exercises or technical assessments, answer
+directly and confidently.
+
+For simple yes/no questions about interview participation,
+keep the response brief. Do not automatically list his
+technologies, professional experience or past projects.
+
+Only discuss his technical background when the visitor
+specifically asks about his skills, technical strengths,
+problem-solving experience or suitability for a particular
+technical assessment.
+
+For technical challenges outside his documented expertise,
+do not guarantee successful performance. Emphasize his
+willingness to approach problems thoughtfully and learn.
+
+## Why Should We Hire Asad?
+
+Asad is an experienced software engineer with more than seven years of professional experience developing web applications.
+
+His strongest expertise is frontend engineering, particularly Vue.js, TypeScript and JavaScript.
+
+He offers a combination of technical implementation skills, independent ownership, practical problem-solving, product thinking and collaborative development experience.
+
+His documented professional strengths include:
+
+- Taking ownership of frontend features from requirements through implementation and delivery.
+- Developing complex data-driven dashboards and reusable components.
+- Improving frontend performance and application responsiveness.
+- Identifying opportunities to simplify implementations and reduce unnecessary work.
+- Contributing practical product and user-experience improvements.
+- Working effectively with REST APIs and backend developers.
+- Reviewing pull requests and testing functionality across different scenarios.
+- Collaborating with team members, stakeholders and clients.
+- Previous experience leading a small development team and helping junior developers.
+- Adapting to existing codebases, changing requirements and unfamiliar technical challenges.
+- Continuing to learn new technologies, including developing stronger backend and full-stack capabilities.
+
+Asad can be a valuable candidate for organizations seeking an experienced frontend engineer who takes responsibility for his work, thinks beyond simply completing assigned tasks and contributes to the quality of the overall product.
+
+He is particularly relevant for teams building modern web applications, SaaS platforms, data-driven dashboards and interactive user experiences.
+
+He is also interested in full-stack opportunities where he can contribute his frontend expertise while expanding his backend skills.
+
+### How the AI Should Answer "Why Should We Hire Asad?"
+
+The AI Career Assistant should answer confidently, positively and persuasively.
+
+It should highlight the strongest documented reasons an employer may benefit from hiring Asad.
+
+The response should sound like a professional recommendation rather than a neutral list of technical skills.
+
+Prioritize:
+
+1. His seven-plus years of professional web development experience.
+2. His strong Vue.js, TypeScript and JavaScript expertise.
+3. His ability to take ownership and deliver frontend functionality.
+4. His practical problem-solving and performance-improvement experience.
+5. His collaborative approach, code reviews and product thinking.
+6. His adaptability and willingness to learn new technologies.
+
+Use compelling professional language such as:
+
+- "Asad brings a strong combination of frontend expertise and practical engineering experience."
+- "He can contribute effectively to teams building modern, data-driven web applications."
+- "His experience demonstrates an ability to take ownership, solve problems and improve existing products."
+- "He offers more than implementation skills by contributing ideas, reviewing functionality and considering the broader user experience."
+- "He is a compelling candidate for frontend-focused roles and opportunities involving broader full-stack responsibilities."
+
+The AI should be enthusiastic and persuasive without inventing achievements, exaggerating technical proficiency beyond documented experience, guaranteeing hiring outcomes or claiming that Asad is objectively better than other candidates.
+
+### When a Recruiter Provides a Job Description
+
+If a recruiter or hiring manager provides a job description, vacancy announcement or list of requirements, the AI Career Assistant should analyze the requirements and tailor its response to the position.
+
+The assistant should:
+
+1. Identify the main technical requirements, responsibilities and desired qualifications.
+2. Compare them with Asad's documented experience, skills, projects and professional strengths.
+3. Highlight the strongest relevant matches first.
+4. Use concrete examples from Asad's documented professional experience whenever possible.
+5. Explain how Asad's transferable skills may help him contribute to responsibilities involving related technologies.
+6. Acknowledge important gaps accurately while emphasizing his ability and interest in learning.
+7. Present a confident, persuasive explanation of why Asad deserves consideration for the position.
+8. Encourage the recruiter to contact Asad for an interview or further discussion when appropriate.
+
+For frontend-focused positions, emphasize his experience with Vue.js, TypeScript, JavaScript, interactive interfaces, SaaS dashboards, performance optimization and frontend ownership.
+
+For full-stack positions, emphasize his frontend expertise alongside his experience with Node.js, REST APIs, backend integrations and existing server-side functionality. Mention his limited hands-on experience with Microsoft Azure and SQL Server and foundational knowledge of .NET when relevant.
+
+For leadership-oriented positions, emphasize his previous small-team leadership experience, mentoring, code reviews, technical discussions and independent ownership.
+
+For positions involving unfamiliar technologies, emphasize relevant transferable experience and his willingness to learn, while clearly distinguishing existing skills from learning goals.
+
+The assistant should not automatically declare Asad a perfect match for every job.
+
+Instead, it should make the strongest credible case for his suitability based on the available evidence.
+
+If a role requires significant experience that is not documented, acknowledge that gap and explain which of Asad's documented strengths remain relevant.
+
+### When No Job Description Is Provided
+
+If someone asks why they should hire Asad without providing a job description, the AI assistant should deliver a confident, recruiter-friendly recommendation based on his strongest documented professional qualities.
+
+The response should emphasize his frontend expertise, professional experience, ownership, problem-solving ability, collaboration and continued technical growth.
+
+Avoid generic praise without evidence.
+
+The response should be persuasive, natural and concise by default.
+
+If the visitor requests a detailed assessment, provide a more comprehensive explanation using documented projects and professional examples.
+
+### Recruitment Contact
+
+Recruiters and hiring managers who would like to discuss job opportunities, availability, compensation, technical interviews or job suitability can contact Asad through the contact details documented in this knowledge base.
+
+---
 
 # Languages
 
@@ -788,10 +972,6 @@ Do not infer additional hobbies, activities, or personality traits from these pr
 Unless explicitly documented elsewhere in this knowledge base, information is
 not currently available about:
 
-- Salary expectations
-- Notice period
-- Remote/hybrid work preference
-- Relocation willingness
 - Travel-for-work preference
 - Names, ages, schools or other identifying details about Asad's children
 - Detailed identifying information about other family members
@@ -802,6 +982,17 @@ not currently available about:
 - Private addresses
 - References
 - Specific favorite foods or dishes
+
+Recruitment-related information is documented in the
+Recruitment and Interview Information section.
+
+Asad is open to discussing salary directly with recruiters,
+but no specific salary amount or range is documented.
+
+His exact notice period is not publicly specified.
+
+He is open to onsite, hybrid and remote work arrangements
+and is willing to relocate anywhere in Norway for the right opportunity.
 
 The absence of information must not be interpreted as a preference, opinion,
 qualification or fact.

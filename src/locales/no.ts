@@ -93,7 +93,7 @@ export default {
       backend: 'Backend og API-er',
       platforms: 'CMS og plattformer',
       database: 'Databaser',
-      devOps: 'Utvikling og DevOps',
+      devOps: 'Sky og DevOps',
       engineering: 'Programvareutvikling',
     },
     engineering: {
@@ -145,9 +145,9 @@ export default {
       'Hei! Jeg er Asads AI-karriereassistent. Du kan spørre meg om hans arbeidserfaring, ferdigheter, prosjekter, utdanning eller sertifiseringer.',
     tryAsking: 'Du kan for eksempel spørre:',
     suggestedQuestions: {
-      vue: 'Hvilken erfaring har Asad med Vue.js?',
-      projects: 'Fortell meg om Asads siste prosjekter.',
-      skills: 'Hva er Asads viktigste tekniske ferdigheter?',
+      hire: 'Hvorfor bør vi ansette Asad?',
+      projects: 'Fortell meg om prosjektene til Asad',
+      jobMatch: 'Hvordan passer Asad til kravene i stillingen vår?',
     },
     placeholder: 'Still et spørsmål om Asad...',
     inputLabel: 'Still Asads AI-karriereassistent et spørsmål',

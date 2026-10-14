@@ -12,6 +12,7 @@ export const portfolio: Portfolio = {
     'Software Engineer with 7+ years of experience building web applications, specializing in frontend development with Vue.js, TypeScript and JavaScript. Experienced in taking ownership of frontend features from requirements to delivery, with a focus on responsive user experiences, data-driven interfaces and performance.',
   },
 
+  
   skills: {
     frontend: [
       'Vue.js',
@@ -31,9 +32,8 @@ export const portfolio: Portfolio = {
 
     backend: [
       'REST APIs',
-      'PHP',
-      'Laravel',
       'Node.js',
+      '.NET (Basic)',
     ],
 
     platforms: [
@@ -43,6 +43,7 @@ export const portfolio: Portfolio = {
 
     database: [
       'PostgreSQL',
+      'SQL Server (Basic)',
     ],
 
     devOps: [
@@ -50,6 +51,7 @@ export const portfolio: Portfolio = {
       'GitHub',
       'Docker',
       'CI/CD',
+      'Microsoft Azure (Basic)',
     ],
 
     engineering: [

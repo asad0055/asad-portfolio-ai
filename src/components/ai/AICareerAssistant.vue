@@ -46,23 +46,24 @@ defineExpose({
 
 const suggestedQuestions = computed(() => [
   {
-    label: t('ai.suggestedQuestions.vue'),
-    icon: 'code',
+    label: t('ai.suggestedQuestions.hire'),
+    icon: 'user',
   },
   {
     label: t('ai.suggestedQuestions.projects'),
     icon: 'folder',
   },
   {
-    label: t('ai.suggestedQuestions.skills'),
-    icon: 'user',
+    label: t('ai.suggestedQuestions.jobMatch'),
+    icon: 'code',
   },
 ])
 
 const selectQuestion = async (question: string) => {
+  if (isLoading.value) return
+
   userInput.value = question
-  await nextTick()
-  inputRef.value?.focus()
+  await sendMessage()
 }
 
 const renderMarkdown = (content: string) => {
@@ -93,7 +94,7 @@ const sendMessage = async () => {
   await scrollToBottom()
 
   try {
-      const response = await fetch('http://localhost:3001/api/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
